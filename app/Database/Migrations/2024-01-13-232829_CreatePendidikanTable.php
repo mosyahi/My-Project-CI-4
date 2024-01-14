@@ -18,18 +18,6 @@ class CreatePendidikanTable extends Migration
             'pendidikan' => [
                 'type' => 'TEXT',
             ],
-            'institusi' => [
-                'type' => 'TEXT',
-            ],
-            'jurusan' => [
-                'type' => 'TEXT',
-            ],
-            'tahun' => [
-                'type' => 'TEXT',
-            ],
-            'ipk' => [
-                'type' => 'TEXT',
-            ],
             'created_at DATETIME DEFAULT CURRENT_TIMESTAMP'
         ]);
 

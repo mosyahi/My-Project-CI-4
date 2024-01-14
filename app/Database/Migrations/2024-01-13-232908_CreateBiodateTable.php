@@ -15,6 +15,11 @@ class CreateBiodateTable extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
+            'user_id' => [
+                'type' => 'INT',
+                'constraint' => 5,
+                'unsigned' => true,
+            ],
             'pendidikan_id' => [
                 'type' => 'INT',
                 'constraint' => 5,
@@ -30,6 +35,7 @@ class CreateBiodateTable extends Migration
                 'constraint' => 5,
                 'unsigned' => true,
             ],
+
             'posisi_lamar' => [
                 'type' => 'VARCHAR',
                 'constraint' => 100,
@@ -99,6 +105,7 @@ class CreateBiodateTable extends Migration
         $this->forge->addForeignKey('pendidikan_id', 'tb_pendidikan', 'id_pendidikan', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('pelatihan_id', 'tb_pelatihan', 'id_pelatihan', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('pekerjaan_id', 'tb_pekerjaan', 'id_pekerjaan', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('user_id', 'tb_user', 'id_user', 'CASCADE', 'CASCADE');
         $this->forge->createTable('tb_biodata');
     }
 

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\AuthModel;
+use App\Models\BiodataModel;
 
 class AuthController extends BaseController
 {
@@ -30,23 +31,21 @@ class AuthController extends BaseController
             if ($user['status'] == 'Active') {
                 $session = \Config\Services::session();
                 $session->set('auth', true);
-                $session->set('nama', $user['nama']);
                 $session->set('email', $user['email']);
                 $session->set('role', $user['role']);
                 $session->set('status', $user['status']);
                 $session->set('id_user', $user['id_user']);
 
-                // if ($user['role'] == 'Siswa') {
-                //     $siswaModel = new SiswaModel();
-                //     $siswaData = $siswaModel->getSiswaByUserId($user['id_user']);
-                //     if ($siswaData) {
-                //         $session->set('foto_url', base_url('uploads/siswa/' . $siswaData['foto']));
-                //         $session->set('siswa_id', $siswaData['id_siswa']);
-                //     }
-                //     return redirect()->to('siswa/dashboard')->with('success', 'Login Berhasil.');
-                // }
+                if ($user['role'] == 'User') {
+                    $biodataModel = new BiodataModel();
+                    $bioData = $biodataModel->getBiodataByUserId($user['id_user']);
+                    if ($bioData) {
+                        $session->set('user_id', $bioData['user_id']);
+                    }
+                    return redirect()->to('user/dashboard')->with('success', 'Login Berhasil.');
+                }
 
-                return redirect()->to('admin/dashboard')->with('success', 'Login Berhasil.');
+                return redirect()->to('admin/dashboard')->with('success', 'Selamat! Login Berhasil.');
             } else {
                 $session = \Config\Services::session();
                 $session->setFlashdata('error', 'Akun Anda tidak aktif. Silahkan hubungi <a href="https://wa.me/628988658838" target="blank" class="text-primary">&nbsp;Admin</a>');
@@ -77,7 +76,6 @@ class AuthController extends BaseController
         $auth = new AuthModel();
 
         $userData = [
-            'nama' => null,
             'email' => $email,
             'password' => $hashedPassword,
             'role' => 'User',

@@ -20,9 +20,18 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
 
 	// BIODATA AREA
 	$routes->get('biodata-pelamar', 'BiodataController::index');
-    $routes->get('biodata-pelamar/new', 'BiodataController::new');
-    $routes->post('biodata-pelamar/add', 'BiodataController::add');
-    $routes->get('biodata-pelamar/edit/(:num)/(:any)', 'BiodataController::edit/$1/$2');
-    $routes->post('biodata-pelamar/update/(:num)', 'BiodataController::update/$1');
-    $routes->get('biodata-pelamar/delete/(:num)', 'BiodataController::delete/$1');
+	$routes->get('biodata-pelamar/new', 'BiodataController::new');
+	$routes->post('biodata-pelamar/add', 'BiodataController::add');
+	$routes->get('biodata-pelamar/view/(:num)/(:any)/(:any)', 'BiodataController::view/$1/$2/$3');
+	$routes->get('biodata-pelamar/edit/(:num)/(:any)/(:any)', 'BiodataController::edit/$1/$2/$3');
+	$routes->post('biodata-pelamar/update/(:num)', 'BiodataController::update/$1');
+	$routes->get('biodata-pelamar/delete/(:num)', 'BiodataController::delete/$1');
+});
+
+$routes->group('user', ['filter' => 'auth'], function ($routes) {
+	$routes->get('dashboard', 'Home::user');
+
+	$routes->get('biodata-pelamar', 'BiodataController::index');
+	$routes->get('biodata-pelamar/formulir', 'BiodataController::isiFormulir');
+	$routes->post('biodata-pelamar/formulir', 'BiodataController::add');
 });

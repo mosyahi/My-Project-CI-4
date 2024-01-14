@@ -9,9 +9,11 @@ class PekerjaanModel extends Model
     protected $table = 'tb_pekerjaan';
     protected $primaryKey = 'id_pekerjaan';
     protected $allowedFields = [
-        'perusahaan', 
-        'posisi', 
-        'pendapatan', 
-        'tahun'
+        'pekerjaan',
+    ];
+
+    protected $validationRules = [
+        'id_pekerjaan' => 'required',
+        'pekerjaan' => 'required',
     ];
 }

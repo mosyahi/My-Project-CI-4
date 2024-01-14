@@ -8,4 +8,9 @@ class Home extends BaseController
     {
         return view('pages/admin/index', ['title' => 'Dashboard', 'active' => 'dashboard']);
     }
+
+    public function user(): string
+    {
+        return view('pages/user/index', ['title' => 'Dashboard', 'active' => 'dashboard']);
+    }
 }

@@ -15,13 +15,7 @@ class CreatePelatihanTable extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'kursus' => [
-                'type' => 'TEXT',
-            ],
-            'sertifikat' => [
-                'type' => 'TEXT',
-            ],
-            'tahun' => [
+            'pelatihan' => [
                 'type' => 'TEXT',
             ],
             'created_at DATETIME DEFAULT CURRENT_TIMESTAMP'

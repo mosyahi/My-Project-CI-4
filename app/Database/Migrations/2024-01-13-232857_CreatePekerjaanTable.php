@@ -15,16 +15,7 @@ class CreatePekerjaanTable extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
-            'perusahaan' => [
-                'type' => 'TEXT',
-            ],
-            'posisi' => [
-                'type' => 'TEXT',
-            ],
-            'pendapatan' => [
-                'type' => 'TEXT',
-            ],
-            'tahun' => [
+            'pekerjaan' => [
                 'type' => 'TEXT',
             ],
             'created_at DATETIME DEFAULT CURRENT_TIMESTAMP'

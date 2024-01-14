@@ -13,7 +13,6 @@
                         <tr>
                             <th>No</th>
                             <th>Role</th>
-                            <th>Nama</th>
                             <th>Email</th>
                             <th>Status</th>
                         </tr>
@@ -24,7 +23,6 @@
                         <tr>
                             <td><?= $i++; ?></td>
                             <td><?= $item['role'] ?></td>
-                            <td><?= $item['nama'] ?></td>
                             <td><?= $item['email'] ?></td>
                             <td class="text-center">
                                 <?php

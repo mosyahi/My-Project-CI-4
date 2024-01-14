@@ -9,8 +9,11 @@ class PelatihanModel extends Model
     protected $table = 'tb_pelatihan';
     protected $primaryKey = 'id_pelatihan';
     protected $allowedFields = [
-        'kursus', 
-        'sertifikat', 
-        'tahun'
+        'pelatihan',
+    ];
+
+    protected $validationRules = [
+        'id_pelatihan' => 'required',
+        'pelatihan' => 'required',
     ];
 }

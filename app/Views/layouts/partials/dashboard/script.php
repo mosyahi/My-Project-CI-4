@@ -1,4 +1,20 @@
 <script src="<?= base_url() ?>bootstrap/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.accordion-body').on('click', '.add-form', function(e) {
+        e.preventDefault();
+
+        var container = $(this).closest('.accordion-body');
+        var lastForm = container.find('.row:last');
+        var newForm = lastForm.clone();
+
+        newForm.find('input, select').val('');
+        container.append(newForm);
+    });
+});
+</script>
+
+
 <script src="<?= base_url() ?>datatables/datatables.min.js"></script>
 <script>
     $(document).ready(function() {

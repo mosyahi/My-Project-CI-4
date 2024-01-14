@@ -7,7 +7,17 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <?php if (session()->get('role') === 'Admin') : ?>
+
         <?= $this->include('layouts/partials/dashboard/navbar') ?>
+
+        <?php elseif (session()->get('role') === 'User') : ?>
+
+        <?= $this->include('layouts/partials/dashboard/navbar-user') ?>
+
+        <?php endif; ?>
+        
     </nav>
 
     <!-- Content -->
