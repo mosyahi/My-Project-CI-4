@@ -1,4 +1,4 @@
-<script src="<?= base_url() ?>bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="<?= base_url() ?>bootstrap/assets/js/bootstrap.bundle.min.js"></script>
 <script src="<?= base_url() ?>bootstrap/all.min.js"></script>
 <script>
 	document.getElementById('togglePassword').addEventListener('click', function() {
