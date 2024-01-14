@@ -1,0 +1,168 @@
+/*AUTH AREA*/
+/* Untuk halaman auth */
+body.auth {
+    background-image: url('../../img/bg/hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    top: 0;
+    left: 0;
+}
+
+.card-style {
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    backgroud: transparent;
+    border: 1px solid gray;
+}
+
+.form-style {
+    backdrop-filter: blur(5px); 
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid gray;
+}
+
+.text-foot {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.text-foot:hover {
+    color: #FFFFFF;
+}
+
+.alert-fade {
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.alert-error {
+    backdrop-filter: blur(5px); 
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.alert-true {
+    backdrop-filter: blur(5px); 
+    background-color: rgba(255, 255, 0, 0.3);
+}
+
+/*DASHBOARD AREA*/
+.logo-brand {
+    width: 15%;
+}
+
+
+body.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('../../img/bg/hero-3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    flex: 1;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.btn-style {
+    background: linear-gradient(45deg, rgba(228, 64, 95, 0.7), rgba(255, 123, 50, 0.7));
+    color: #fff;
+    backdrop-filter: blur(5px);
+    border: 0px;
+}
+
+.btn-style-2 {
+    background: linear-gradient(45deg, rgba(64, 95, 140, 0.7), rgba(29, 53, 87, 0.7));
+    color: #fff;
+    backdrop-filter: blur(5px);
+    border: 0px;
+}
+
+.btn-style-3 {
+    background: linear-gradient(45deg, rgba(50, 92, 122, 0.7), rgba(26, 188, 156, 0.7));
+    color: #fff;
+    backdrop-filter: blur(5px);
+    border: 0px;
+}
+
+.blur {
+    backdrop-filter: blur(5px); 
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid gray;
+}
+
+.toggle-password {
+    backdrop-filter: blur(5px); 
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.header-table {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+.header-accordion {
+    background: transparent;
+    backdrop-filter: blur(15px);
+}
+
+.table-transparent {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-collapse: collapse;
+}
+
+.table-transparent tr {
+    background: transparent;
+}
+
+.table-transparent th {
+    background: transparent;
+}
+
+.table-transparent td {
+    background: transparent;
+}
+
+.table-transparent.dataTables_wrapper {
+    background: transparent;
+    border: none;
+}
+
+
+.table {
+    border-color: rgba(115, 114, 114, 0.5);
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container-position {
+    margin-top: 100px;
+}
+
+.badge-style {
+    background: linear-gradient(45deg, rgba(228, 64, 95, 0.7), rgba(255, 123, 50, 0.7));
+    color: #fff;
+    backdrop-filter: blur(5px);
+}
