@@ -11,9 +11,4 @@ class PekerjaanModel extends Model
     protected $allowedFields = [
         'pekerjaan',
     ];
-
-    protected $validationRules = [
-        'id_pekerjaan' => 'required',
-        'pekerjaan' => 'required',
-    ];
 }

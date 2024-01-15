@@ -11,9 +11,4 @@ class PelatihanModel extends Model
     protected $allowedFields = [
         'pelatihan',
     ];
-
-    protected $validationRules = [
-        'id_pelatihan' => 'required',
-        'pelatihan' => 'required',
-    ];
 }
