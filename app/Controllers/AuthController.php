@@ -84,7 +84,7 @@ class AuthController extends BaseController
 
         $valid = $auth->where('email', $userData['email'])->first();
         if ($valid) {
-            return redirect()->back()->with('error', 'Email sudah ada dalam database.');
+            return redirect()->back()->with('error', 'Email sudah terdaftar.');
         }
 
         $auth->insert($userData);

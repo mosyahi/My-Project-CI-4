@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row align-items-center">
         <div class="col-6">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="<?= current_url() ?>">
                 <img src="https://mosyahizuku.site/assets/img/head.png" class="logo-brand" alt="Logo Syarif"> Apps Testing
             </a>
         </div>

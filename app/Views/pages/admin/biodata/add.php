@@ -109,13 +109,13 @@
           <input type="text" class="form-control form-style" name="telepon_two" placeholder="Nomor Handphone Orang Terdekat*" value="<?= old('telepon_two') ?>" required>
       </div>
 
-      <div class="col-6">
+      <div class="col-12">
         <label class="form-label">Skill</label>
         <textarea class="form-control form-style" name="skill" rows="2" placeholder="Tulisakan Keahlian & Keterampilan Yang anda miliki saat ini*" required><?= old('skill') ?></textarea>
     </div>
 
     <div class="col-6">
-        <label class="form-label">Penempatan</label>
+        <label class="form-label">Siap ditempatkan dimana saja</label>
         <select class="form-select form-style" name="question" required>
             <option selected disabled>-- Pilih --</option>
             <option>Ya</option>
